@@ -1,0 +1,7 @@
+<div class="about-item">
+    <h5 (click)="showAction()">{{itemdata.title}}</h5>
+    <figure *ngIf="showed">
+        <img [src]="itemdata.src" alt="">
+        <figcaption>{{itemdata.parag}}</figcaption>
+    </figure>
+</div>

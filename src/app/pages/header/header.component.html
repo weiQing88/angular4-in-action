@@ -1,0 +1,15 @@
+<header class="common-header">
+    <nav class="nav-left">
+        <a [routerLink]="['/home']" routerLinkActive="active">首页</a>
+        <a [routerLink]="['/management']" routerLinkActive="active">我的问卷</a>
+        <a [routerLink]="['/about']" routerLinkActive="active">帮助</a>
+        <a [routerLink]="['/custom']" routerLinkActive="active">各户中心</a>
+    </nav>
+    <nav class="nav-right">
+        <a [routerLink]="['/create']" routerLinkActive="active">创建新问卷</a>
+        <a [routerLink]="['/register']" *ngIf="logged" routerLinkActive="active">注册</a>
+        <a [routerLink]="['/login']" *ngIf="logged" routerLinkActive="active">登录</a>
+        <a [routerLink]="['/login']" *ngIf="!logged" routerLinkActive="active">{{username}}</a>
+        <a *ngIf="!logged" (click)="logout()" style="cursor:pointer">退出登录</a>
+    </nav>
+</header>

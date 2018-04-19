@@ -11,10 +11,13 @@ import { State } from '../../state-management/main.state';
 export class StoreInActionComponent implements OnInit {
     data  : number =  0;
   constructor(private store:Store<any>) {
+
+    // 监听每次 dispatch
      this.store.select('mainStoreReducer').subscribe((data : State)=> {
-            this.data = data.counter;
-             console.log(data.counter);
+               this.data = data.counter;
+                console.log(data.counter);
           });
+
 
 
    }

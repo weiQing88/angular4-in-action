@@ -10,19 +10,16 @@ interface INFOSTRUCTURE {
 }
 
 
-
 @Injectable()
 export class LoginServer{
-
       constructor(private ls : LocalStorage,private router : Router){}
-
       logined(key : string,info :INFOSTRUCTURE) {
                  this.ls.setObject(key,info); 
                 // 登录成后跳转回指定页面。
-                this.router.navigateByUrl('/');
-                
+                this.router.navigateByUrl('/');    
       }
 
-
-   
 }
+
+
+

@@ -3,6 +3,20 @@
     <section class="baner">
         <p>这是广告栏</p>
     </section>
+    <section>
+
+        <button nz-button [nzType]="primary">Antd测试按钮</button>
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="测试 Rxjs" id="rxjs-input">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" (click)="testEffect()"> 测试Effects </button>
+        </form>
+
+    </section>
     <section class="create-questionnaire">
         <span><i>{{numbers}}</i>个用户正在使用  </span>
         <button type="button" class="btn btn-primary" [routerLink]="['/login']">创建新问卷</button>
